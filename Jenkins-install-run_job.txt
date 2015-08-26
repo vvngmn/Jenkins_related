@@ -1,0 +1,18 @@
+Jenkins.war -> put in tomcat webapps and untar
+restart Tomcat
+log Jenkins webpage(IP:port) and install plug-in: git, testlink 
+
+
+Git repositary -> generate pub key and private key
+(didnot use)Bit bucket -> public key
+(didnot actually use)check from ssh client: Server pull git repositary -> OK
+Robot -> install robotframework
+
+[Configure for Free style Project]
+Source Code Management -> Git, username and password
+
+Execute shell ->
+cd /root/.jenkins/jobs/freestyle2/workspace
+git checkout master
+git pull
+pybot /root/.jenkins/jobs/freestyle2/workspace/Testsuite/SanityTestsuite_Fusion.txt
